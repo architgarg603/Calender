@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><img src="/images/logo.png" alt=""> PEP CALENDER</div>
+        <div class="header-Options">
+            <div class="todays-Date"></div>
+            <div class="shifter"><i class="fas fa-angle-left"></i><i class="fas fa-angle-right"></i></div>
+        </div>
+        <div class="header-more-options" style="width: 13%;">
+            <div class="calender-Changer">
+                <select name="" id="Type-Changer">
+                    <option value="Daily">Daily</option>
+                    <option value="Weakly">Week</option>
+                    <option value="Monthly">Month</option>
+                    <option value="Yearly">Year</option>
+                </select>
+            </div>
+            <div class="logout" style="margin-left: 30px;">Logout</div>
+        </div>
+
+
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="todays-btn-wrapper">
+                <div class="todays-Btn">Today</div>
+            </div>
+            <div class="nav-calender">
+                <div class="nav-calender-head">
+                    <div class="nav-calender-month"></div>
+                    <div class="nav-calender-btn">
+                        <i class="fas fa-angle-left"></i><i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="nav-calender-days">
+                    <div class="nav-calender-day">S</div>
+                    <div class="nav-calender-day">M</div>
+                    <div class="nav-calender-day">T</div>
+                    <div class="nav-calender-day">W</div>
+                    <div class="nav-calender-day">T</div>
+                    <div class="nav-calender-day">F</div>
+                    <div class="nav-calender-day">S</div>
+                </div>
+                <div class="nav-calender-dates">
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                    <div class="nav-calender-date"><span></span></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="daily-calender">
+                <div class="daily-timer">
+                    <div class="daily-time">1</div>
+                    <div class="daily-time">2</div>
+                    <div class="daily-time">3</div>
+                    <div class="daily-time">4</div>
+                    <div class="daily-time">5</div>
+                    <div class="daily-time">6</div>
+                    <div class="daily-time">7</div>
+                    <div class="daily-time">8</div>
+                    <div class="daily-time">9</div>
+                    <div class="daily-time">10</div>
+                    <div class="daily-time">11</div>
+                    <div class="daily-time">12</div>
+                    <div class="daily-time">13</div>
+                    <div class="daily-time">14</div>
+                    <div class="daily-time">15</div>
+                    <div class="daily-time">16</div>
+                    <div class="daily-time">17</div>
+                    <div class="daily-time">18</div>
+                    <div class="daily-time">19</div>
+                    <div class="daily-time">20</div>
+                    <div class="daily-time">21</div>
+                    <div class="daily-time">22</div>
+                    <div class="daily-time">23</div>
+                    <div class="daily-time">24</div>
+                </div>
+                <div class="daily-schedule-wrapper">
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                    <div class="daily-schedule"></div>
+                </div>
+
+            </div>
+            <div class="weekly-calender">
+                <div class="weekly-days">
+                    <div class="weekly-day">
+                        <div class="weekly-date"></div> Sunday
+                    </div>
+                    <div class="weekly-day">
+                        <div class="weekly-date"></div> Monday
+                    </div>
+                    <div class="weekly-day">
+                        <div class="weekly-date"></div> Tuesday
+                    </div>
+                    <div class="weekly-day">
+                        <div class="weekly-date"></div> Wednesday
+                    </div>
+                    <div class="weekly-day">
+                        <div class="weekly-date"></div> Thursday
+                    </div>
+                    <div class="weekly-day">
+                        <div class="weekly-date"></div> Friday
+                    </div>
+                    <div class="weekly-day">
+                        <div class="weekly-date"></div> Saturday
+                    </div>
+                </div>
+                <div class="weekly-calender-wrapper">
+                    <div class="weekly-timer">
+                        <div class="weekly-time">1</div>
+                        <div class="weekly-time">2</div>
+                        <div class="weekly-time">3</div>
+                        <div class="weekly-time">4</div>
+                        <div class="weekly-time">5</div>
+                        <div class="weekly-time">6</div>
+                        <div class="weekly-time">7</div>
+                        <div class="weekly-time">8</div>
+                        <div class="weekly-time">9</div>
+                        <div class="weekly-time">10</div>
+                        <div class="weekly-time">11</div>
+                        <div class="weekly-time">12</div>
+                        <div class="weekly-time">13</div>
+                        <div class="weekly-time">14</div>
+                        <div class="weekly-time">15</div>
+                        <div class="weekly-time">16</div>
+                        <div class="weekly-time">17</div>
+                        <div class="weekly-time">18</div>
+                        <div class="weekly-time">19</div>
+                        <div class="weekly-time">20</div>
+                        <div class="weekly-time">21</div>
+                        <div class="weekly-time">22</div>
+                        <div class="weekly-time">23</div>
+                        <div class="weekly-time">24</div>
+                    </div>
+                    <div class="weekly-schedule-wrapper">
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                        <div class="weekly-schedule"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="monthly-calender">
+                <div class="monthly-days">
+                    <div class="monthly-day">Sunday</div>
+                    <div class="monthly-day">Monday</div>
+                    <div class="monthly-day">Tuesday</div>
+                    <div class="monthly-day">Wednesday</div>
+                    <div class="monthly-day">Thursday</div>
+                    <div class="monthly-day">Friday</div>
+                    <div class="monthly-day">Saturday</div>
+                </div>
+                <div class="monthly-dates">
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                    <div class="monthly-date"></div>
+                </div>
+
+            </div>
+            <div class="yearly-calender">
+                <div class="yearly-calender-wrapper">
+
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">January </div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month"> February</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">March </div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">April </div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">May</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">June</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">July</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">August</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">September</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">October</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">November</div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                    <div class="yearly-calender-part">
+                        <div class="yearly-calender-head">
+                            <div class="yearly-calender-month">December </div>
+                        </div>
+                        <div class="yearly-calender-days">
+                            <div class="yearly-calender-day">S</div>
+                            <div class="yearly-calender-day">M</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">W</div>
+                            <div class="yearly-calender-day">T</div>
+                            <div class="yearly-calender-day">F</div>
+                            <div class="yearly-calender-day">S</div>
+                        </div>
+                        <div class="yearly-calender-dates">
+                            <div class="yearly-calender-date "><span class="active-year-date">15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                            <div class="yearly-calender-date"><span>15</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="see-event-popup">
+                <div class="close-see-popup"><i class="fas fa-times"></i></div>
+                <div class="see-heading"> Event Details</div>
+                <div class="see-title"><input type="text" id="see-title" disabled></div>
+                <div class="see-faculty">
+                    <span>Choose Faculty :</span>
+                </div>
+                <div class="see-time">
+                    <div class="see-st-time-wrapper">
+                        <span>Starting date:</span>
+                        <input type="date" name="" disabled id="see-st-date">
+                    </div>
+                    <div class="see-ed-time-wrapper">
+                        <span>Ending date:</span>
+                        <input type="date" name="" disabled id="see-ed-date">
+                    </div>
+                </div>
+                <div class="see-time">
+                    <div class="see-st-time-wrapper">
+                        <span>Starting time:</span>
+                        <input type="time" name="" disabled id="see-st-time">
+                    </div>
+                    <div class="see-ed-time-wrapper">
+                        <span>Ending time:</span>
+                        <input type="time" name="" disabled id="see-ed-time">
+                    </div>
+                </div>
+                <div class="see-details">
+                    Details
+                    <textarea name="" disabled id="see-details"></textarea>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        set_mail = "<%- mail %>"
+    </script>
+    <script src="/js/faculty/script.js"></script>
+    <!-- =========changed=========== -->
+    <script src="/js/faculty/init.js"></script>
+    <script src="/js/faculty/utils.js"></script>
+    <script src="/js/faculty/change-dates.js"></script>
+    <script src="/js/faculty/scroll-anime.js"></script>
+    <script src="/js/faculty/calender-changer.js"></script>
+    <script src="/js/faculty/set-nav-calender.js"></script>
+    <script src="/js/faculty/set-calender.js"></script>
+</body>
+
+</html>

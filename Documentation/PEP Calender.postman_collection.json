@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "93027891-c6e2-4bae-b96f-6183ff74ab3b",
+		"name": "PEP Calender",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "View Calender",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Faculty_id\": \"email\",\r\n    \"title\": \"title\",\r\n    \"st_date\": \"yyyy-mm-dd\",\r\n    \"ed_date\": \"yyyy-mm-dd\",\r\n    \"st_time\": \"HHMM\",\r\n    \"ed_time\": \"HHMM\",\r\n    \"details\": \"Details\",\r\n    \"day\": \"day\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/event/add",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"event",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/event/get",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"event",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send todays schedule to all faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/mail/remind",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"mail",
+						"remind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send mail to faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"email\",\r\n    \"subject\":\"subject\",\r\n    \"body\":\"body\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/mail/to",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"mail",
+						"to"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\": \"newUser.uid\",\r\n    \"name\": \"newUser.name\",\r\n    \"email\": \"newUser.email\",\r\n    \"phone\": \"newUser.phone\",\r\n    \"color\": \"newUser.color\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/faculty/add",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"faculty",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/faculty/get/all",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"faculty",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get faculty by email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mail\":\"email\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pepcalender.herokuapp.com/faculty/getid",
+					"protocol": "https",
+					"host": [
+						"pepcalender",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"faculty",
+						"getid"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

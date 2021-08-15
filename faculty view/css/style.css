@@ -1,0 +1,971 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+    cursor: default;
+
+}
+body{
+    margin: 0px;
+    padding: px;
+}
+
+.header{
+    height: 80px;
+    width: 1534.6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    border: 1px solid gainsboro;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 17%;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(69, 67, 67);
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+
+.header-Options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 22%;
+}
+.header-more-options{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    position: relative;
+}
+.header-more-options i{
+    cursor: pointer;
+}
+.show-more{
+    display: block !important;
+}
+.more-options{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    display: none;
+    background-color: white;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgb(179, 177, 177);
+}
+.more-options>div{
+    width: 150px;
+    height: 30px;
+    font-size: large;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+    background-color: white;
+    padding: 0px 10px;
+}
+.more-options>div:hover{
+    background-color: gainsboro;
+}
+
+.shifter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+    width: 20%;
+}
+.shifter i{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.shifter i:hover{
+    transform: scale(1.2);
+}
+.todays-Date{
+    width: 65%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+.calender-Changer{
+    width: 80%;
+}
+.calender-Changer select{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+
+.content{
+    height: calc( 100vh - 80px );
+    width: 100%;
+    display: flex;
+}
+
+.left{
+    min-width: 341px;
+    max-width: 341px;
+    height: 640.3px;
+    padding: 0px 30px 20px 30px;
+    overflow: auto;
+}
+.left::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+.left::-webkit-scrollbar-track {
+    -webkit-box-shadow: transparent; 
+    border-radius: 10px;
+    
+    
+
+
+}
+
+body::-webkit-scrollbar {
+    height: 0.11px;  /* Remove scrollbar space */
+    width: 0.1px;
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+body::-webkit-scrollbar-thumb {
+    background: black;
+    height: 1px;
+}
+
+
+
+.left::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: transparent;
+}
+.show-scroll::-webkit-scrollbar-thumb{
+    background-color: rgba(106, 106, 106, 0.4) !important; 
+
+}
+
+.todays-btn-wrapper{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.todays-Btn{
+    width: 50%;
+    text-align: center;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.714);
+    cursor: pointer;
+    
+}
+.nav-calender{
+    width: 100%;
+    height: 36%;
+
+}
+
+.nav-calender-head,.faculty-list-head{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.nav-calender-month,.faculty-list-head span{
+    font-weight: bold;
+}
+.nav-calender-btn,.faculty-list-head i{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.6);
+    
+}
+.nav-calender-btn i{
+    cursor: pointer;
+}
+.nav-calender-btn i:hover{
+    transform: scale(1.2);
+}
+
+.nav-calender-days,.nav-calender-dates{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav-calender-day,.nav-calender-date span{
+    width: 35px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: rgb(66, 65, 65);
+    font-size: medium;
+}
+.nav-calender-date{
+    width: calc( 100% / 7 );
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.nav-calender-date span{
+    width: 30px;
+    justify-content: center;
+    color: black; 
+    transition: 0.6s; 
+    cursor: pointer; 
+}
+
+.nav-calender-date span:hover{
+    background-color: gainsboro;
+
+}
+
+.faculty-list{
+    width: 100%;
+    height: fit-content;
+}
+
+.faculty-list-head i{
+    justify-content:center;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.faculty-list-head i:hover{
+    transform: scale(1.1);
+}
+.faculty-list-search{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+.faculty-list-search input{
+    height: 100%;
+    width: 90%;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    padding-right: 20px;
+    color: rgb(99, 99, 99);
+    font-size: large;
+    border-radius: 15px;
+    cursor: text;
+    background-color: rgba(167, 159, 159, 0.219);
+}
+
+.faculty-list-search:before{
+    content: '\f406';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    color: rgb(32, 32, 32);
+    top: 7.5px;
+    left: 10%;
+}
+
+.faculty-list-wrapper{
+    width: 100%;
+}
+.faculty{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.faculty span{
+    font-size: large;
+    color: rgb(99,99,99);
+}
+.checkbox{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.checkbox input{
+    height: 20px;
+    width: 20px;
+}
+
+.del-faculty{
+    position: absolute;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: rgb(99,99,99);
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+}
+.right{
+    min-width: 1195.33px;
+    max-width: 1195.33px;
+    height: 640.8px;
+    overflow: auto;
+    position: relative;
+    border-color: gainsboro !important;
+}
+
+.daily-calender,.weekly-calender,.monthly-calender,.yearly-calender{
+    width: 100%;
+    height: 100% ;
+    display: none;
+    position: relative;
+    
+}
+
+.daily-timer,.daily-schedule-wrapper,.weekly-timer,.weekly-schedule-wrapper,.monthly-days{
+    display: flex;
+    width: fit-content;
+    height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.daily-schedule-wrapper,.weekly-schedule-wrapper{
+    min-height: calc( 100% - 40px );
+}
+.daily-time,.weekly-time{
+    min-width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: large;
+
+}
+.daily-schedule,.weekly-schedule{
+    min-width: 80px;
+    height: 100%;
+    border-right: 1px solid gainsboro;
+}
+.right::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+ 
+.right::-webkit-scrollbar-track {
+    -webkit-box-shadow: transparent; 
+    border-radius: 10px;
+    
+    
+}
+
+.right::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(154, 154, 154, 0.3); 
+}
+
+.right-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(106, 106, 106, 0.5) !important; 
+}
+
+.weekly-calender-wrapper{
+    height: 100%;
+    width: fit-content;
+}
+
+.weekly-days{
+    height: 100%;
+    min-width: 120px;
+    padding-top: 40px;
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    background-color: white;
+    border-right:1px solid gainsboro;
+    border-bottom:1px solid gainsboro;
+}
+.weekly-day{
+    min-height: calc( 100% / 7);
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+    
+}
+.monthly-days{
+    width: 100%;
+}
+.monthly-day{
+    min-width: calc( 100% / 7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.monthly-dates{
+    width: 100%;
+    height: calc( 100% - 40px );
+    /* overflow: hidden; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.monthly-date{
+    min-width: calc( 100% / 7);
+    padding: 20px;
+    border-bottom: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+
+.yearly-calender-wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.yearly-calender-part{
+    width: calc( 100% / 4.5 );
+    margin: 0px 30px 10px 0px
+}
+
+.yearly-calender-head{
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+}
+.yearly-calender-days{
+    width: 100%;
+    display: flex;
+}
+.yearly-calender-day{
+    width: calc( 100% / 7 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yearly-calender-dates{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.yearly-calender-date{
+    width: calc( 100% / 7 );
+    height: 25px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.yearly-calender-date span{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: medium;
+}
+.yearly-calender-date span:hover{
+    background-color: gainsboro;
+}
+
+.active-year-date,.active-nav-date{
+    background-color: rgba(167, 208, 243, 0.614) !important;
+}
+
+.active-nav-today-date{
+    background-color: rgba(144, 198, 247, 0.814) !important;
+
+}
+
+.daily-calender{
+    display: block;
+}
+
+.add-event{
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: rgb(113, 112, 112);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    background-color: white;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+.add-event i{
+    cursor: pointer;
+}
+
+.add-event-popup{
+    position: fixed;
+    width: 30vw;
+    background-color: white;
+    z-index: 50;
+    box-shadow: 0px 0px 20px grey;
+    left: 40vw;
+    padding: 20px;
+    top: 10vh;
+    border-radius: 20px;
+    display: none;
+}
+.close-add-popup,.close-add-popup i{
+    display: flex;
+    justify-content: flex-end;
+    font-size: x-large;
+    cursor: pointer;
+    
+}
+.add-event-popup .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    margin-bottom: 25px;
+    border-bottom: 5px solid rgb(198, 222, 245);
+}
+.st-time-wrapper,.ed-time-wrapper,.add-repeat,.add-faculty{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 10%;
+    margin-bottom: 20px;
+
+}
+#add-title{
+    width: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    font-size: large;
+    margin-bottom: 25px;
+
+}
+.add-faculty,.add-repeat{
+    font-size: large;
+}
+#add-faculty,#add-repeat{
+    width: 50%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    font-size: large;
+   
+}
+
+.add-time span{
+    font-size: large;
+}
+.add-time input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    font-size: medium;
+    width: 50%;
+}
+
+.add-details{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+#add-details{
+    height: 100px;
+}
+
+.add-event-submit{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.add-event-submit::after{
+    content: '';
+    background-color: rgb(198, 222, 245);
+    width: 0%;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s;
+
+}
+.add-event-submit:hover::after{
+    width: 100%;
+}
+.remove-faculty-confirm,.reminder-faculty-confirm{
+    width: 460px;
+    height: 123px;
+    border: 1px solid;
+    top: 15vh;
+    left: 25vw;
+    background-color: white;
+    z-index: 5;
+    position: absolute;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+}
+.remove-faculty-header,.reminder-faculty-header{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(225, 221, 221);
+}
+.remove-faculty-header span,.reminder-faculty-header span{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.remove-faculty-details,.reminder-faculty-details{
+    padding: 20px;
+}
+.remove-faculty-submit,.reminder-faculty-submit{
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 30px;
+    
+}
+.remove-faculty-submit span,.reminder-faculty-submit span{
+    border-radius: 5px;
+    height: 100%;
+    width: 100px;
+    border: 1px solid grey;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-mail-popup{
+    width: 460px;
+    height: 435px;
+    top: 15vh;
+    left: 25vw;
+    background-color: white;
+    z-index: 50;
+    position: absolute;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px grey;
+    padding: 20px;
+    display: none;
+}
+
+.send-mail-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.send-mail-choose-faculty,.send-mail-subject,.send-mail-body{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+#send-mail-choose-faculty,#send-mail-subject,#send-mail-body{
+    font-size: large;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+    color: rgb(91, 90, 90);
+}
+
+#send-mail-body{
+    height: 130px;
+}
+.send-mail-submit{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.send-mail-submit span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.send-mail-submit::after{
+    content: '';
+    background-color: rgb(198, 222, 245);
+    width: 0%;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s;
+
+}
+.send-mail-submit:hover::after{
+    width: 100%;
+}
+
+.send-mail-close{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: large;
+    font-weight:bold ;
+}
+.send-mail-close i{
+    cursor: pointer;
+}
+.add-faculty-msg,.add-event-msg{
+    font-weight: bold;
+    color: red;
+    margin-bottom: 10px;
+    height: 20px;
+}
+.add-faculty-color{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+#add-faculty-color{
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    outline: none;
+    width:50px;
+    margin-left: 20px;
+}
+.add-faculty-popup{
+    width: 460px;
+    height: 432px;
+    position: absolute;
+    top:15vh;
+    left: 25vw;
+    box-shadow: 0px 0px 10px grey;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    z-index: 50;
+    display: none;
+}
+.add-faculty-close{
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+
+}
+.add-faculty-close i{
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.add-faculty-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    border-bottom: 5px solid rgb(198, 222, 245);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.add-faculty-name,.add-faculty-email,.add-faculty-mobile{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+#add-faculty-name,#add-faculty-email,#add-faculty-mobile{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    font-size: large;
+    color: gray;
+}
+
+.add-faculty-submit span{
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.add-faculty-submit::after{
+    content: '';
+    background-color: rgb(198, 222, 245);
+    width: 0%;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s;
+
+}
+.add-faculty-submit:hover::after{
+    width: 100%;
+}
+.add-event-days{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-bottom: 15px;
+    font-size: large;
+}
+.add-event-days input{
+    height: 15px;
+    width: 15px;
+}
+.yearly-calender-date::after{
+    background-color: rgba(128, 128, 128, 0.194);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+}
+
+.yearly-calender-date:hover::after{
+    opacity: 1;
+}
+
+.daily-schedule-view-part-wrapper{
+    background-color: blue;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 15px;
+    color: white;
+    position: absolute;
+    z-index: 5;
+    top: 45px;
+    /* overflow: hidden; */
+    height: 120px;
+    opacity: 0.6;
+}
+
+.daily-schedule-view-part-title{
+    font-size: large;
+    font-weight: bold;
+}
+.daily-schedule-view-part-timing{
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.daily-schedule-view-part-name{
+    text-align: end;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.monthly-schedule-wrapper-color{
+    width: 15px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    position: relative;
+    z-index: 5;
+    
+}
+.weekly-schedule-wrapper-event{
+    border-radius: 5px;
+    position: absolute;
+    z-index: 5;   
+    display: flex;
+    align-items: center;
+}
+.weekly-schedule-wrapper{
+    position: relative;
+}
+.monthly-schedule-wrapper{
+    display: flex;
+    align-items: center;
+}
+.monthly-schedule-wrapper-title{
+    font-size: medium;
+}
+
